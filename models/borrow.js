@@ -20,7 +20,7 @@ const borrowSchema = new mongoose.Schema({
   },
   returnDate: {
     type: Date,
-    required: true,
+
     default: null,
     description: "Date when the book is due to be returned",
   },
@@ -33,7 +33,6 @@ const borrowSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
-
 
 const Borrow = mongoose.model("Borrow", borrowSchema);
 export default Borrow;
