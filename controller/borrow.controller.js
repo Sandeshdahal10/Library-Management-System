@@ -97,3 +97,18 @@ export const borrowHistory = async (req, res) => {
     res.status(500).json({ message: "Internal server error" });
   }
 };
+
+export const getAllBorrowers = async (req, res) => {
+  try {
+    const borrowers = await Borrow.find()
+    if (borrowers.length === 0) {
+      return res.status(404).json({ message: "No borrowers found" });
+    }
+    res
+      .status(200)
+      .json({ message: "Borrowers retrieved successfully", borrowers });
+  } catch (error) {
+    console.error("Error retrieving borrowers:", error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+};

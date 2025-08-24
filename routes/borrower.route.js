@@ -3,6 +3,7 @@ import {
   borrowBook,
   returnBook,
   borrowHistory,
+  getAllBorrowers,
 } from "../controller/borrow.controller.js";
 import { authorizationRoles, verifyToken } from "../middleware/verifytoken.js";
 
@@ -25,6 +26,12 @@ router.get(
   verifyToken,
   authorizationRoles("Borrower"),
   borrowHistory
+);
+router.get(
+  "/borrowers",
+  verifyToken,
+  authorizationRoles("Librarian"),
+  getAllBorrowers
 );
 
 export default router;
