@@ -4,6 +4,8 @@ import {
   returnBook,
   borrowHistory,
   getAllBorrowers,
+  updateBorrower,
+  deleteBorrower
 } from "../controller/borrow.controller.js";
 import { authorizationRoles, verifyToken } from "../middleware/verifytoken.js";
 
@@ -32,6 +34,20 @@ router.get(
   verifyToken,
   authorizationRoles("Librarian"),
   getAllBorrowers
+);
+
+router.put(
+  "/borrowers/:borrowerId",
+  verifyToken,
+  authorizationRoles("Librarian"),
+  updateBorrower
+);
+
+router.delete(
+  "/borrowers/:borrowerId",
+  verifyToken,
+  authorizationRoles("Librarian"),
+  deleteBorrower
 );
 
 export default router;
