@@ -23,6 +23,6 @@ app.use("/api", router);
 app.use("/api", borrowRouter);
 app.use("/api", authRouter);
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server is running on port ${PORT}`);
 });
