@@ -100,7 +100,7 @@ export const borrowHistory = async (req, res) => {
 
 export const getAllBorrowers = async (req, res) => {
   try {
-    const borrowers = await Borrow.find()
+    const borrowers = await Borrow.find().populate('userId', 'name ');
     if (borrowers.length === 0) {
       return res.status(404).json({ message: "No borrowers found" });
     }
