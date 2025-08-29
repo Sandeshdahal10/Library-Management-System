@@ -1,3 +1,7 @@
+/**
+ * routes/book.route.js
+ * Public and librarian-only routes to manage books.
+ */
 import express from "express";
 import {
   createBook,

@@ -1,3 +1,8 @@
+/**
+ * server.js
+ * Entry point for the API server. Sets up middleware, routes and connects
+ * to the database. Exposes the API under `/api`.
+ */
 import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./database/database.js";

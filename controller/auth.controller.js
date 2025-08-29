@@ -1,3 +1,7 @@
+/**
+ * Handles user registration and login. Uses bcrypt for password hashing
+ * and JWT for issuing authentication tokens.
+ */
 import User from "../models/user.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";

@@ -1,3 +1,8 @@
+/**
+ * models/borrow.js
+ * Mongoose model for tracking borrowed books (which user borrowed which book
+ * and when). Exports the `Borrow` model.
+ */
 import mongoose from "mongoose";
 
 const borrowSchema = new mongoose.Schema({

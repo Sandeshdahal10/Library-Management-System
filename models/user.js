@@ -1,3 +1,8 @@
+/**
+ * models/user.js
+ * Mongoose model for application users. Stores name, email, hashed password
+ * and role (Borrower | Librarian).
+ */
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({

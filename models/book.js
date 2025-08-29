@@ -1,3 +1,7 @@
+/**
+ * models/book.js
+ * Mongoose model for books stored in the library.
+ */
 import mongoose from "mongoose";
 
 

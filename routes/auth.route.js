@@ -1,3 +1,7 @@
+/**
+ * routes/auth.route.js
+ * Routes for authentication: /register (Librarian-only) and /login.
+ */
 import express from "express";
 import { loginUser, registerUser } from "../controller/auth.controller.js";
 import { authorizationRoles, verifyToken } from "../middleware/verifytoken.js";

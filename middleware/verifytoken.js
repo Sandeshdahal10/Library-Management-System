@@ -1,3 +1,10 @@
+/**
+ * middleware/verifytoken.js
+ * Authentication and authorization middleware. `verifyToken` validates
+ * a Bearer JWT from the Authorization header and attaches decoded data to
+ * `req.user`. `authorizationRoles(...roles)` returns a middleware that
+ * checks `req.user.role` against allowed roles.
+ */
 import jwt from 'jsonwebtoken';
 
 export const verifyToken = (req, res, next) => {

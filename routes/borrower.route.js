@@ -1,3 +1,8 @@
+/**
+ * routes/borrower.route.js
+ * Routes used by borrowers (and librarians where appropriate) to borrow/return
+ * books, view borrow history and manage borrower records.
+ */
 import express from "express";
 import {
   borrowBook,

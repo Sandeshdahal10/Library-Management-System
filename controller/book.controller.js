@@ -1,3 +1,6 @@
+/**
+ * CRUD operations for books: create, read, update and delete.
+ */
 import Book from '../models/book.js';
 
 export const createBook = async (req, res)=>{

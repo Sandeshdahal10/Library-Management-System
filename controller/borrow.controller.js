@@ -1,3 +1,8 @@
+/**
+ * Controller for borrow-related actions: borrow a book, return a book,
+ * view borrow history and manage borrower records. Functions expect
+ * authenticated user data on `req.user` (set by auth middleware).
+ */
 import Borrow from "../models/borrow.js";
 import Book from "../models/book.js";
 

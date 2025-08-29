@@ -1,3 +1,7 @@
+/**
+ * MongoDB connection helper. Exports `connectDB()` which connects using
+ * the `MongoDB_URL` environment variable.
+ */
 import mongoose from 'mongoose';
 const connectDB = async () => {
   try{
